@@ -33,11 +33,12 @@ main:
     pushl $Linie
     pushl $sfs
     call scanf
+    popl %ebx
+    popl %ebx
+
     pushl $Coloana
     pushl $sfs
     call scanf
-    popl %ebx
-    popl %ebx
     popl %ebx
     popl %ebx
 
