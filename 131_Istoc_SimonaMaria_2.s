@@ -130,7 +130,9 @@ et_citire_NrEvolutii:
     popl %ebx
     popl %ebx
 
-
+    pushl pointer
+    call fclose
+    popl %ebx
 
 
 //loop in care executam cele k evolutii
@@ -410,7 +412,7 @@ et_afisare:
 et_exit:
     pushl pointer
     call fclose
-    popl %edx
+    popl %ebx
 
     mov $1, %eax
     xor %ebx, %ebx
